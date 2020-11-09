@@ -13,9 +13,9 @@ export default function Registration() {
     onSubmit: onSubmit
   };
   return (
-    <section>
-      <h1> Registration </h1>
+    <div>
+      <h3>Registration</h3>
       <RegistrationForm {...formProps} />
-    </section>
+    </div>
   );
 }

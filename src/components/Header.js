@@ -1,12 +1,12 @@
 import React from "react";
-import { Navbar, NavbarBrand, NavbarText } from "reactstrap";
+import { Navbar, NavbarBrand, NavLink } from "reactstrap";
 
 export default function Header() {
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Logo</NavbarBrand>
-        <NavbarText>Sign In</NavbarText>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">demo-react-payment</NavbarBrand>
+        <NavLink href="/">Log In</NavLink>
       </Navbar>
     </div>
   );
