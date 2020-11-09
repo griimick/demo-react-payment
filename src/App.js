@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Plans, Payments, Registration } from "./views";
-import { PrivateRoute } from "./components";
+import { PrivateRoute, Header } from "./components";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <h1 style={{ background: "yellow" }}>demo-react-payment</h1>
+      <Header />
       <Switch>
         <Route path="/plans" exact component={Plans} />
         <Route path="/register" exact component={Registration} />
