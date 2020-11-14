@@ -4,7 +4,9 @@ import { Container, Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 export default function RegistrationForm(props) {
   const { handleSubmit, register, errors } = useForm();
-  const onSubmit = (values) => props.onSubmit && props.onSubmit(values);
+  const onSubmit = (values) => {
+    props.onSubmit && props.onSubmit(values);
+  };
   return (
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
