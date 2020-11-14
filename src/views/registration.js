@@ -1,6 +1,7 @@
 import React from "react";
 import { RegistrationForm } from "../components";
 import { useHistory } from "react-router-dom";
+import { Container } from "reactstrap";
 
 export default function Registration() {
   let history = useHistory();
@@ -13,9 +14,8 @@ export default function Registration() {
     onSubmit: onSubmit
   };
   return (
-    <div>
-      <h3>Registration</h3>
+    <Container style={{ paddingTop: 40 }}>
       <RegistrationForm {...formProps} />
-    </div>
+    </Container>
   );
 }
