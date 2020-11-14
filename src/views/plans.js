@@ -40,7 +40,7 @@ const plans = [
 
 export default function Plans() {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <Jumbotron>
         <h3 className="display-5">demo-react-payments</h3>
         <p className="lead">

@@ -1,8 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Plans, Payments, Registration } from "./views";
+import { Plans, Payments, Registration, Login } from "./views";
 import { PrivateRoute, Header } from "./components";
-import "./styles.css";
 
 export default function App() {
   return (
@@ -11,6 +10,7 @@ export default function App() {
       <Switch>
         <Route path="/plans" exact component={Plans} />
         <Route path="/register" exact component={Registration} />
+        <Route path="/login" exact component={Login} />
         <PrivateRoute path="/pay" exact component={Payments} />
         <Plans /> {/* Default component to load */}
       </Switch>

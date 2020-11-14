@@ -10,7 +10,7 @@ import {
   FormFeedback
 } from "reactstrap";
 
-export default function RegistrationForm(props) {
+export default function LoginForm(props) {
   const { handleSubmit, watch, register, errors } = useForm();
   const watchPassword = watch("password", null);
   const onSubmit = (values) => {
@@ -51,22 +51,6 @@ export default function RegistrationForm(props) {
           />
           <FormFeedback>
             {errors.password && errors.password.message}
-          </FormFeedback>
-        </FormGroup>
-        <FormGroup>
-          <Label for="paswordConfirm">Confirm Password</Label>
-          <Input
-            name="passwordConf"
-            type="password"
-            invalid={!!errors.passwordConf}
-            innerRef={register({
-              required: "Required",
-              validate: (value) =>
-                value === watchPassword || "Password does not match."
-            })}
-          />
-          <FormFeedback>
-            {errors.passwordConf && errors.passwordConf.message}
           </FormFeedback>
         </FormGroup>
         <Button type="submit">Submit</Button>
